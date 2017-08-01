@@ -1,0 +1,85 @@
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+</head>
+
+<form action="reg.php" method="post" id="register">
+<script>
+function donow() {
+var dta = window.document.getElementById('usrname').innerText;
+//var ifr = 
+window.document.getElementById('ifrme').document.src = "http://google.co.uk";
+}
+</script>
+<table cellpadding="0" cellspacing="0" width="519" height="25" id="table1">
+	<!-- MSTableType="layout" -->
+	<tr>
+		<td width="270">
+		USERNAME:</td>
+		<td height="25" width="249" valign="top">
+<input type=text name="usr" size="29" value="<?php echo $_POST['usr'];?>" id="usrname" onchange="donow()"><iframe id="ifrme" src="dev/exists.php" height="20"></iframe>
+	</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" width="519" height="25" id="table2">
+	<!-- MSTableType="layout" -->
+	<tr>
+		<td width="270">
+		EMAIL:</td>
+		<td height="25" width="249" valign="top">
+<input type=text name="email" size="29" value="<?php echo $_POST['email'];?>"></td>
+	</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" width="519" height="25" id="table3">
+	<!-- MSTableType="layout" -->
+	<tr>
+		<td width="270">
+		PASSWORD:</td>
+		<td height="25" width="249" valign="top">
+<input type=password name="pss" size="29"></td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="519" height="25" id="table4">
+	<!-- MSTableType="layout" -->
+	<tr>
+		<td width="270" valign="top">
+		CONFIRM PASSWORD:</td>
+		<td height="25" width="249" valign="top">
+<input type=password name="cpss" size="29"></td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="519" height="25" id="table5">
+	<!-- MSTableType="layout" -->
+	<tr>
+		<td width="270">
+		FULL NAME:</td>
+		<td height="25" width="249" valign="top">
+<input type=text name="fullname" size="29"></td>
+	</tr>
+</table>
+<?php require('dev/pass.php'); ?>
+<p>&nbsp;</p>
+Do you want guests to be able to read your messages?
+
+<select name="pub">
+<option value="n">No</option>
+<option value="y">Yes</option>
+</select><p>When you get a message on your board email the message to you?
+<select name="newposts">
+<option value="n">No</option>
+<option value="y">Yes</option>
+</select>
+</p>
+<fieldset style="width: 1036; height: 2">Terms:<p>You agree that you will not 
+post abusive or racist comments on Litter, doing so may terminate your account 
+so be warned!</p>
+<p><b><font color="#FF0000">Swearing</font></b> will involve the message being deleted, but if you do it 
+regularly your account will be terminated </p>
+<p>Do you agree? <select name="agree">
+<option value="n">No</option>
+<option value="y">Yes</option></select></p></fieldset>
+<p>Log you in when you register? <select name="login"><option value="n">No</option><option value="y">Yes</option></select></p>&nbsp;<p>
+<input type = submit value = "Submit your details">
+<input type=hidden value="true" name="sub">
+&nbsp
+</form>

@@ -1,0 +1,14 @@
+<script src="tiny_mce/tiny_mce.js"></script>
+<script>
+tinyMCE.init({
+mode : "textareas",
+theme : "advanced",
+theme_advanced_buttons4 : "fontsizeselect"
+});
+</script>
+<p align="center">Create a diary entry</p>
+<form method="post" action="makediary.php">
+<textarea rows="10" cols="55" name="txt" style="width:100%"></textarea>
+    <input type="hidden" name="sub" value="TRUE" />
+    <p align="center"><input type="submit" value="Make the diary entry" /></p>
+</form>

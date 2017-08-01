@@ -1,0 +1,37 @@
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+</head>
+
+<form action="reg.php" method="post">
+USERNAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=text name="usr" size="29" value="<?php echo $_POST['usr'];?>">
+
+<p>EMAIL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+<input type=text name="email" size="29" value="<?php echo $_POST['email'];?>">
+
+</p>
+PASSWORD:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=password name="pss" size="29"><p>CONFIRM PASSWORD:&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=password name="cpss" size="29">
+</p><fieldset>
+<legend>MAKE YOUR MESSAGES VISIBLE TO GUESTS?</legend>
+<select name="pub">
+<option value="n">No</option>
+<option value="y">Yes</option>
+</select>
+</fieldset>
+<fieldset>
+<legend>EMAIL ME WHEN NEW POSTS GET POSTED TO YOUR BOARD?</legend>
+<p>WARNING!! IF YOU ARE VERY POPULAR THEN THIS WILL FILL YOUR MAILBOX, CHOOSE CAREFULLY!!</p>
+<select name="newposts">
+<option value="n">No</option>
+<option value="y">Yes</option>
+</select>
+</fieldset>
+<p>PLEASE NOTE THAT NONE OF THESE DETAILS CAN BE CHANGED AT A LATER DATE!!</p>
+<p>
+<input type = submit value = "Submit your details">
+<input type=hidden value="true" name="sub">
+&nbsp;<a href="index.php">I'm done, take me back!</a></p>
+</form>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module> 
+  <ModulePrefs title="Little Litter" author_email="jamesorlakin@gmail.com" author="Call a geek - James Lakin" author_location="Hampshire, England, UK">
+  </ModulePrefs>
+<UserPref datatype="enum" name="amountofmsg" display_name="Display how many messages" default_value="five">
+<EnumValue value="two" display_value="2"/>
+<EnumValue value="five" display_value="5"/>
+<EnumValue value="ten" display_value="10"/>
+<EnumValue value="all" display_value="All messages"/>
+</UserPref>
+  <Content type="html" view="home">
+    <![CDATA[
+<script>
+ if (navigator.appName.indexOf("Microsoft")!=-1) {
+  winW = document.body.offsetWidth;
+  winH = document.body.offsetHeight+35;
+ } else {
+  winW = window.innerWidth;
+  winH = window.innerHeight+35;
+ }
+var gadg = new gadgets.Prefs();
+var pref = gadg.getString("amountofmsg");
+window.document.write('<p align="center"><font size="1.5">Little Litter - Showing ' + pref + ' recent messages</font></p>');
+window.document.write('<iframe src="http://litter.comuv.com/app/google?amount=' + pref + '" frameborder="0" width=' + winW + 'height=' + winH + ' />');
+</script> 
+    ]]>  
+  </Content>
+  <Content type="html" view="canvas"> 
+    <![CDATA[
+<p>About:</p>
+<p>Little Litter for Igoogle</p>
+<p>Call a geek</p>
+<p>Version 0.95</p>
+<p>18 / 9 / 10</p>
+<p>Checking version page on remote server:</p>
+<iframe src="http://litter.comuv.com/app/google/version.htm" frameborder="0" />
+    ]]> 
+  </Content>
+</Module>
